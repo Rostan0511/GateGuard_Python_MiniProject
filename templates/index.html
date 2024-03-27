@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barcode Scanner</title>
+</head>
+<body>
+    <h1>Barcode Scanner</h1>
+    
+    <!-- Video feed from the camera -->
+    <img id="video_feed" src="{{ url_for('video_feed') }}" width="640" height="480" style="display: block; margin-bottom: 10px;">
+    
+    <!-- Buttons to start and stop barcode scanning -->
+    <button onclick="startScan()">Start Scan</button>
+    <button onclick="stopScan()">Stop Scan</button>
+    
+    <script>
+        function startScan() {
+    fetch('/start_scan')
+        .then(response => {
+            if (response.ok) {
+                console.log('Barcode scanning started.');
+            } else {
+                console.error('Failed to start barcode scanning.');
+            }
+        })
+        .catch(error => {
+            console.error('Error starting barcode scanning:', error);
+        });
+}
+
+function stopScan() {
+    fetch('/stop_scan')
+        .then(response => {
+            if (response.ok) {
+                console.log('Barcode scanning stopped.');
+            } else {
+                console.error('Failed to stop barcode scanning.');
+            }
+        })
+        .catch(error => {
+            console.error('Error stopping barcode scanning:', error);
+        });
+}
+
+    </script>
+</body>
+</html>
