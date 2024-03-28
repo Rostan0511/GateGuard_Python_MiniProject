@@ -1,0 +1,93 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #0e2238;
+}
+
+header.module {
+    text-align: center;
+    padding: 40px 0;
+    /* Remove background color for header */
+    background-color: transparent;
+    /* Add background image with stripes */
+    background-image: url("stripe.jpg");
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header.module h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: black; /* Set text color to white for better contrast */
+}
+
+p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+section {
+    margin: 40px auto;
+    width: 60%;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #988f9c;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+    display: block;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    border-radius: 3px;
+}
+
+form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border-radius: 3px;
+}
+
+form button:hover {
+    background-color: #3e8e41;
+}
+
+#contact-info ul.social-media {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    text-align: center;
+}
+
+#contact-info ul.social-media li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+#contact-info ul.social-media li a i {
+    font-size: 20px; /* Set font size for social media icons */
+    color: #ccc; /* Add a light gray color for the icons */
+}
+
+#contact-info ul.social-media li a i:hover {
+    color: #4CAF50; /* Change icon color on hover */
+}
